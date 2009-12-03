@@ -1,0 +1,6 @@
+<% form_tag(Billing::Bancomer::Integration.service_url) do -%>
+  <% bancomer_helper.form_fields.each do |key, value| -%>
+  <%= hidden_field_tag key, value  %>
+  <% end -%>
+  <%= submit_tag t('bancomer_integration.pay') %>
+<% end -%>
